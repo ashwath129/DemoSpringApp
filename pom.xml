@@ -28,6 +28,11 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.sentry</groupId>
+			<artifactId>sentry-spring</artifactId>
+			<version>5.3.0</version>
+		</dependency>
+		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
 			<version>2.1</version>
