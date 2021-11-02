@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.apache.log4j.Logger;
 
 import com.journaldev.spring.model.User;
+import io.sentry.spring.EnableSentry;
 
+@EnableSentry(dsn = "https://1c3f9be78b41405197c51ee1510d9b68@o1058377.ingest.sentry.io/6046015")
 @Controller
 public class HomeController {
 	private static final Logger log = Logger.getLogger(HomeController.class.getName());
@@ -48,6 +50,7 @@ public class HomeController {
 		}
 		catch (Exception e) {
 	           System.out.println(e);
+		   Sentry.captureException(e);
             	   log.error(e.getMessage());
             	   StringWriter writer = new StringWriter();
                    PrintWriter pw = new PrintWriter(writer);
