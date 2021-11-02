@@ -17,6 +17,7 @@ import org.apache.log4j.Logger;
 
 import com.journaldev.spring.model.User;
 import io.sentry.spring.EnableSentry;
+import io.sentry.Sentry;
 
 @EnableSentry(dsn = "https://1c3f9be78b41405197c51ee1510d9b68@o1058377.ingest.sentry.io/6046015")
 @Controller
